@@ -20,10 +20,25 @@ class MainActivity : ComponentActivity() {
         setContent {
             RoomDemoTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    )
+                    ScreenSetup(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
+    }
+}
+
+@Composable
+fun ScreenSetup(modifier: Modifier = Modifier) {
+    MainScreen(modifier)
+}
+@Composable
+fun MainScreen(modifier: Modifier = Modifier) {
+}
+@Preview(showBackground = true)
+@Composable
+fun MainScreenPreview() {
+    RoomDemoTheme {
+        MainScreen()
     }
 }
 
